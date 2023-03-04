@@ -46,4 +46,5 @@ You can visit RedisInsights on [http://localhost:8081](http://localhost:8081)
 
 - Add `x-api-key` to the backend and frontend.
 - Add type sharing between frontend and backend.
+- Move API URL to config on the frontend.
 - React 18 does its thing with firing `useEffect` [twice](https://beta.reactjs.org/learn/synchronizing-with-effects#how-to-handle-the-effect-firing-twice-in-development).
