@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "exec_mode": "cluster",
+      "instances": "max",
+      "script": "./build/index.js",
+      "name": "movie-searcher",
+      "interpreter": "node"
+    }
+  ]
+}
