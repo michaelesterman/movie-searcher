@@ -1,0 +1,1 @@
+export { queryMovies } from "./queryMovies";
