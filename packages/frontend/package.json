@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "scripts": {
+    "test": "jest",
+    "build": "rm -rf build && webpack --config webpack.prod.js",
+    "dev": "rm -rf build && webpack serve --mode development --open --hot"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
