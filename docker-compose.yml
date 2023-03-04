@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  redis-stack:
+    container_name: movie-search-cache
+    image: redis/redis-stack
+    restart: always
+    ports:
+      - "6379:6379"
