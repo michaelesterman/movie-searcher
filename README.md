@@ -1,4 +1,4 @@
-# Finite State Machine in React Showcase
+# Movie Searcher
 
 ## Introduction
 
