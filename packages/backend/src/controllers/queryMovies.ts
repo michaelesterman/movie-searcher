@@ -1,4 +1,5 @@
 import axios from "axios";
+import { cacheResult } from "../services/caching";
 import { SearchResult, SearchError } from "../types";
 
 export const queryMovies = async (
@@ -25,6 +26,8 @@ export const queryMovies = async (
     };
 
     const { data } = await axios(config);
+
+    await cacheResult(data, title, page);
 
     return data;
   } catch (error) {
