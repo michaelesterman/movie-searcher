@@ -28,6 +28,7 @@ const main = async () => {
     }
 
     const result = await queryMovies(title, page);
+
     res.json(result);
   });
 
