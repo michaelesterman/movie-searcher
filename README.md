@@ -12,6 +12,13 @@ Run Redis (you need to have Docker installed):
 docker compose up -d
 ```
 
+Add `.env` to `packages/backend` with the following content:
+
+```
+PORT=3000
+OMDB_API_KEY=<OMDB API key>
+```
+
 Install dependencies:
 
 ```sh
