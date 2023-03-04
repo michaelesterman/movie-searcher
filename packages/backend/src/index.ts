@@ -3,7 +3,8 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 
-import { queryMovies } from "./controllers/queryMovies";
+import { queryMovies } from "./controllers";
+import { getCachedResult } from "./services";
 
 const main = async () => {
   const app = express();
@@ -20,8 +21,13 @@ const main = async () => {
     const title = (req.query.title as string) || "";
     const page = (req.query.page as string) || "1";
 
-    const result = await queryMovies(title, page);
+    const cachedResult = await getCachedResult(title, page);
 
+    if (cachedResult) {
+      return res.json(cachedResult);
+    }
+
+    const result = await queryMovies(title, page);
     res.json(result);
   });
 

@@ -5,6 +5,10 @@ export const queryMovies = async (
   title: string,
   page = "1"
 ): Promise<SearchResult | SearchError> => {
+  if (!title) {
+    return { error: "No title" };
+  }
+
   try {
     const url = `https://www.omdbapi.com/`;
     const params = {
